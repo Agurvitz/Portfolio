@@ -1,0 +1,24 @@
+.charset input {
+    display: inline-block;
+}
+.charsheet input.sheet-short {
+   display: inline-block;
+   width: 3.5em;
+}
+.charsheet input.sheet-medium{
+   display: inline-block;
+   width: 6.5em;
+}
+.charset input.sheet-long{
+	display: inline-block;
+	width: 7.5em;
+}
+.charset table{
+	border-collapse:collapse;
+	border-style:solid;
+	border: 1px;
+	text-align:center;
+}
+.charset td{
+	border: none;
+}

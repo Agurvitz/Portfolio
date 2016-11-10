@@ -1,0 +1,3 @@
+This is a character sheet made for use in the online virtual tabletop Roll20.
+The sheet is not meant to run as a webpage outside of the Roll20 environment.
+Screenshots have been included to show how the sheet looks on the Roll20 service.
