@@ -1,0 +1,2 @@
+The ContosoUniversity file is a directed ASP.NET tutorial. It is being hosted
+on Microsoft Azure at: agconu.azurewebsites.net
