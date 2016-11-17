@@ -1,0 +1,1123 @@
+	<div class="sheet-tab-content sheet-tab1">
+
+	<!--Character informaiton table, left side-->
+	<div class="sheet-2colrow">
+		<div class="sheet-col">
+		<h2>Character Biography</h2>
+		<table style='width: 300px; border: none; text-align: left;'><tr><td>
+			<tr>
+				<td>Player Name:<br><input type="text" name="attr_playerName"/></td>
+				<td>Race:<br><input type="text" name="attr_charRace"/></td>
+				
+			</tr>
+			<tr> 
+				<td>Character Name:<input type="text" name="attr_character_name"/></td>
+				<td>Age:<br><input type="text" name="attr_charAge"/></td>
+			</tr>
+			<tr>
+				<td>Height:<br><input type="text" name="attr_charHeight"/></td>
+				<td>Gender:<br><input type="text" name="attr_charGender"/></td>
+			</tr>
+			<tr>
+				<td>Weight:<br><input type="text" name="attr_charWeight"/></td>
+				<td>Build:<br><input type="text" name="attr_charBuild"/></td>
+			</tr>
+			<tr>
+				<td>Handedness:<br><input type="text" name="attr_charHand"/></td>
+				<td>Face:<br><input type="text" name="attr_charFace"/></td>
+			</tr>
+			<tr>
+				<td>Eyes:<br><input type="text" name="attr_charEyes"/></td>
+				<td>Hair:<br><input type="text" name="attr_charHair"/></td>
+			</tr>
+			<tr>
+				<td>Alignment:<br><input type='text' name="attr_charAlign"/></td>
+			</tr>
+		</table>
+		<br>
+		</div>
+
+		<!--Character information table, right side-->
+		<div class="sheet-col">
+			<table style='width: 300px; border: none; text-align: left;'>
+				<tr>
+					<td>Values and Beliefs:<br><textarea name="attr_charVal"></textarea></td>
+				</tr>
+				<br>
+				<tr>
+					<td>Goals:<br><textarea name="attr_charGoals"></textarea></td>
+				</tr>
+				<br>
+			</table>
+		</div>
+	</div>
+
+	<h2>Ability Scores</h2>
+	<!--Ability score table-->
+	<div class="sheet-2colrow">
+		<div class="sheet-col">
+			<table border="1" style="text-align:center;" cellpadding="5" style= 'width:600px;'>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black; border-bottom: none;'>Strength</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Score</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Deg</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Melee Hit<br> Bonus</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Melee Damage<br> Adj.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Weight Allow</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Open Doors</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Bend Bars/<br>Lift Gates</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black;'><button type="roll" name="roll_strengthTest" value="&{template:default} {{name=Strength Check}} {{result=[[1d20+@{charStrength}]]}}"></button></td>
+					<td><input type="text" name="attr_charStrength" class="sheet-short" value="00"/></td>
+					<td><input type="text" name="attr_charStrengthDegree" class="sheet-short" value="00"/></td>
+					<td><input type="number" name="attr_charMeleeHitAdj" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charMeleeDmgAdj" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charWeightAllow" class="sheet-short"  value="00"/></td>
+					<td><input type="text" name="attr_charOpenDoors" class="sheet-short" value="0(0)"/></td>
+					<td><input type="text" name="attr_charBendBars" class="sheet-short" value="00"></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black; border-bottom: none;'>Dexterity</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Score</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Ranged Hit <br>Bonus</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Defensive Adj.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black;'><button type="roll" name="roll_dexterityTest" value="&{template:default} {{name=Dexterity Check}} {{result=[[1d20+@{charDexterity}]]}}"></button></td>
+					<td><input type="number" name="attr_charDexterity" class="sheet-short" value="00"/></td>
+					<td></td>
+					<td><input type="number" name="attr_charRangedHitAdj" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charDefensiveAdj" class="sheet-short" value="0"/></td>
+					<td></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black; border-bottom: none;'>Constitution</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Score</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>HP Adj.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>System Shock</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Poison Save<br> Adj.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black;'><button type="roll" name="roll_constitutionTest" value="&{template:default} {{name=Constitution Check}} {{result=[[1d20+@{charConstitution}]]}}"></button></td>
+					<td><input type="number" name="attr_charConstitution" class="sheet-short" value="00"/></td>
+					<td></td>
+					<td><input type="number" name="attr_charHPAdj" class="sheet-short" value="0"/></td>
+					<td><input type="text" name="attr_charSystemShock" class="sheet-short" value="00"/></td>
+					<td><input type="number" name="attr_charPoisonSaveAdj" class="sheet-short"  value="0"/></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black; border-bottom: none;'>Intelligence</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Score</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Languages</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Proficiency Points<br> Per Level</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Max Spell<br> Level</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Chance to<br> Learn Spells</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Max Spells/<br>Level</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Illusion Save<br>Adj.</td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black;'><button type="roll" name="roll_intelligenceTest" value="&{template:default} {{name=Intelligence Check}} {{result=[[1d20+@{charIntelligence}]]}}"></button></td>
+					<td><input type="number" name="attr_charIntelligence" class="sheet-short" value="00"/></td>
+					<td></td>
+					<td><input type="number" name="attr_charLangauges" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charProfPointsPerLevel" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charMaxSpellLevel" class="sheet-short"  value="0"/></td>
+					<td><input type="text" name="attr_charChanceToLearn" class="sheet-short" value="00"/></td>
+					<td><input type="number" name="attr_charMaxSpellsPerLevel" class="sheet-short" value="0"/></td>
+					<td><input type="text" name="attr_charIllusionSaveAdj" class="sheet-medium" value="0"/></td>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black; border-bottom: none;'>Wisdom</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Score</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Magic Save<br> Adj.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Passive<br> Perception</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Cleric Spell<br> Bonus</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Cleric Spell<br> Failure</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black;'><button type="roll" name="roll_wisdomTest" value="&{template:default} {{name=Wisdom Check}} {{result=[[1d20+@{charWisdom}]]}}"></button></td>
+					<td><input type="number" name="attr_charWisdom" class="sheet-short" value="00"/></td>
+					<td></td>
+					<td><input type="number" name="attr_charMagicSaveAdj" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charPassivePerception" class="sheet-short" value="00"/></td>
+					<td><input type="text" name="attr_charClericSpellBonus" class="sheet-medium" value="0st"/></td>
+					<td><input type="number" name="attr_charClericSpellFailure" class="sheet-short"  value="00"/></td>
+					<td></td>
+					<td></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black; border-bottom: none;'>Charisma</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Score</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Max<br> Henchmen</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Loyalty Adj.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'>Reaction Adj.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-top: 1px solid black;'></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border-bottom: 1px solid black; border-right: 1px solid black;'><button type="roll" name="roll_CharismaTest" value="&{template:default} {{name=Charisma Check}} {{result=[[1d20+@{charCharisma}]]}}"></button></td>
+					<td><input type="number" name="attr_charCharisma" class="sheet-short" value="00"/></td>
+					<td></td>
+					<td><input type="number" name="attr_charMaxHenchmen" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charLoyaltyAdj" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_charReactionAdj" class="sheet-short"  value="0"/></td>
+					<td></td>
+					<td></td>
+					<td></td>
+				</tr>
+			</table>
+		</div>
+		</div>
+	</div>
+	<br>
+
+	<!--Classes, Misc, & Saves-->
+	<div class="sheet-3colrow">
+		<div class="sheet-col">
+			<h2>Classes</h2>
+				<table border="0;" style="text-align:center; margin-bottom: 1px;" cellpadding="2" frame="box">
+					<tr>
+						<td style='background-color: #c6dbfd; color: #000000;'>Class</td>
+						<td style='background-color: #c6dbfd; color: #000000;'></td>
+						<td style='background-color: #c6dbfd; color: #000000;'>Level</td>
+					</tr>
+					<tr>
+						<td style="border-bottom: 1px solid line;"><input type="text" name="attr_charClass" class="sheet-medium" placeholder="Class"/></td>
+						<td style="border-bottom: 1px solid line;"></td>
+						<td style="border-bottom: 1px solid line;"><input type="number" name="attr_charLevel" class="sheet-short" placeholder="0"/></td>
+					</tr>
+					<tr>
+						<td style='background-color: #c6dbfd; color: #000000;'>Current XP</td>
+						<td style='background-color: #c6dbfd; color: #000000;'>Next Level</td>
+						<td style='background-color: #c6dbfd; color: #000000;'></td>
+					</tr>
+					<tr>
+						<td style="border-bottom: 1px solid line;"><input type="text" name="attr_charCurrentExp" class="sheet-medium" placeholder="0,000"/></td>
+						<td style="border-bottom: 1px solid line;"><input type="text" name="attr_charNextLevel" class="sheet-medium" placeholder="0,000"/></td>
+						<td style="border-bottom: 1px solid line;"></td>
+					</tr>
+					<tr>
+						<td style='background-color: #c6dbfd; color: #000000;'>HD</td>
+						<td style='background-color: #c6dbfd; color: #000000;'>HP</td>
+						<td style='background-color: #c6dbfd; color: #000000;'>To Hit<br>Bonus</td>
+					</tr>
+					<tr>
+						<td><input type="text" name="attr_charClassHD" class="sheet-short" placeholder="0d0"/></td>
+						<td><input type="number" name="attr_charClassHP" class="sheet-short" placeholder="0"/></td>
+						<td><input type="number" name="attr_charClassHitBonus" class="sheet-short" placeholder="0"/></td>
+					</tr>
+					<br>
+				</table>
+			<fieldset class="repeating_classes1">
+				<table border="0;" style="text-align:center; margin-bottom: 1px;" cellpadding="2" frame="box">
+					<tr>
+						<td style='background-color: #c6dbfd; color: #000000;'>Class</td>
+						<td style='background-color: #c6dbfd; color: #000000;'></td>
+						<td style='background-color: #c6dbfd; color: #000000;'>Level</td>
+					</tr>
+					<tr>
+						<td style="border-bottom: 1px solid line;"><input type="text" name="attr_charClass" class="sheet-medium" placeholder="Class"/></td>
+						<td style="border-bottom: 1px solid line;"></td>
+						<td style="border-bottom: 1px solid line;"><input type="number" name="attr_charLevel" class="sheet-short" placeholder="0"/></td>
+					</tr>
+					<tr>
+						<td style='background-color: #c6dbfd; color: #000000;'>Current XP</td>
+						<td style='background-color: #c6dbfd; color: #000000;'>Next Level</td>
+						<td style='background-color: #c6dbfd; color: #000000;'></td>
+					</tr>
+					<tr>
+						<td style="border-bottom: 1px solid line;"><input type="text" name="attr_charCurrentExp" class="sheet-medium" placeholder="0,000"/></td>
+						<td style="border-bottom: 1px solid line;"><input type="text" name="attr_charNextLevel" class="sheet-medium" placeholder="0,000"/></td>
+						<td style="border-bottom: 1px solid line;"></td>
+					</tr>
+					<tr>
+						<td style='background-color: #c6dbfd; color: #000000;'>HD</td>
+						<td style='background-color: #c6dbfd; color: #000000;'>HP</td>
+						<td style='background-color: #c6dbfd; color: #000000;'>To Hit<br>Bonus</td>
+					</tr>
+					<tr>
+						<td><input type="text" name="attr_charClassHD" class="sheet-short" placeholder="0d0"/></td>
+						<td><input type="number" name="attr_charClassHP" class="sheet-short" placeholder="0"/></td>
+						<td><input type="number" name="attr_charClassHitBonus" class="sheet-short" placeholder="0"/></td>
+					</tr>
+					<br>
+				</table>
+			</fieldset>
+			<h2>Health</h2>
+			<table border="0" cellpadding="2" style="text-align:center;" frame="box">
+				<tr>
+					<td style='background-color: #ffb3b5; color: #000000; border:none;'>Current</td>
+					<td style='background-color: #ffb3b5; color: #000000; border:none;'>Max</td>
+				</tr>
+				<tr>
+					<td><input type="number" name="attr_charHP" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_charMaxHP" class="sheet-short" placeholder="0"/></td>
+				</tr>
+			</table>
+		</div>
+		<div class="sheet-col">
+			<h2>Miscellaneous</h2><br>
+			<table border="0" cellpadding="2" style="text-align:center;" frame="box">
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>EC</td>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Thresh.</td>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Languages</td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none; text-align:left;'>Current:</td>
+					<td><input type="text" name="attr_charEncCurrent" class="sheet-short" disabled="true" value="[[@{itemTotalWeight}]]" placeholder="0"/></td>
+					<td><input type="text" name="attr_charLanguage1" class="sheet-medium" placeholder="Language"/></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; text-align:left;'>Base:</td>
+					<td><input type="text" name="attr_charEncBase" class="sheet-short" placeholder="00"/></td>
+					<td><input type="text" name="attr_charLanguage2" class="sheet-medium" placeholder="Language"/></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; text-align:left;'>Light:</td>
+					<td><input type="text" name="attr_charEncLight" class="sheet-short" placeholder="00"/></td>
+					<td><input type="text" name="attr_charLanguage3" class="sheet-medium" placeholder="Language"/></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; text-align:left;'>Moderate:</td>
+					<td><input type="text" name="attr_charEncModerate" class="sheet-short" placeholder="00"/></td>
+					<td><input type="text" name="attr_charLanguage4" class="sheet-medium" placeholder="Language"/></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; text-align:left;'>Heavy:</td>
+					<td><input type="text" name="attr_charEncHeavy" class="sheet-short" placeholder="00"/></td>
+					<td><input type="text" name="attr_charLanguage5" class="sheet-medium" placeholder="Language"/></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; text-align:left;'>Severe:</td>
+					<td><input type="text" name="attr_charEncSevere" class="sheet-short" placeholder="00"/></td>
+					<td><input type="text" name="attr_charLanguage6" class="sheet-medium" placeholder="Language"/></td>
+				</tr>
+			</table>
+			<br>
+			<textarea name="attr_miscNotes"></textarea>
+		</div>
+		<div class="sheet-col">
+			<h2>Saving Throws</h2><br>
+			<table border="0" cellpadding="2" frame="box">
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Save vs:</td>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Target</td>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Mod</td>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Paralyzation</td>
+					<td><input type="number" name="attr_charParalSave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charParalMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsParal" value="&{template:default} {{name=Save vs Paralyzation}} {{result=[[1d20+@{charParalMod}+?{Modifier?|0}]]}} {{target=@{CharParalSave}+}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Poison</td>
+					<td><input type="number" name="attr_charPoisonSave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charPoisonMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsPoison" value="&{template:default} {{name=Save vs Poison}} {{result=[[1d20+@{charPoisonMod}+?{Modifier?|0}]]}} {{target=@{CharPoisonSave}+}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Death</td>
+					<td><input type="number" name="attr_charDeathSave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charDeathMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsDeath" value="&{template:default} {{name=Save vs Death}} {{result=[[1d20+@{charDeathMod}+?{Modifier?|0}]]}} {{target=@{CharDeathSave}+}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Rod/Staff/<br>Wand</td>
+					<td><input type="number" name="attr_charRodSave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charRodMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsRod" value="&{template:default} {{name=Save vs Rod/Staff/Wand}} {{result=[[1d20+@{charRodMod}+?{Modifier?|0}]]}} {{target=@{CharRodSave}+}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Petrification</td>
+					<td><input type="number" name="attr_charPetrifSave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charPetrifMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsPetriph" value="&{template:default} {{name=Save vs Petrification}} {{result=[[1d20+@{charPetrifMod}+?{Modifier?|0}]]}} {{target=@{CharPetrifSave}+}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Polymorph</td>
+					<td><input type="number" name="attr_charPolySave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charPolyMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsPoly" value="&{template:default} {{name=Save vs Polymorph}} {{result=[[1d20+@{charPolyMod}+?{Modifier?|0}]]}} {{target=@{CharPolySave}+}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Breath Weapon</td>
+					<td><input type="number" name="attr_charBreathSave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charBreathMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsBreath" value="&{template:default} {{name=Save vs Breath Weapon}} {{result=[[1d20+@{charBreathMod}+?{Modifier?|0}]]}} {{target=@{CharBreathSave}+}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #c6dbfd; color: #000000; border:none;'>Spell</td>
+					<td><input type="number" name="attr_charSpellSave" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_charSpellMod" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_vsSpell" value="&{template:default} {{name=Save vs Spell}} {{result=[[1d20+@{charSpellMod}+?{Modifier?|0}]]}} {{target=@{CharSpellSave}+}}"></button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<br>
+
+	<!--Weapons-->
+	<div class="sheet-row">
+		<div class="sheet-col">
+			<h2>Weapons</h2>
+			<table style="text-align:center; border:none;" cellpadding="2">
+				<tr>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Name</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>#/Atk</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Attack<br>Mod</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Dmg<br>Dice</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Dmg<br>Mod</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Range</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'></td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'></td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Speed</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Type</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Size</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Init</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Atk</td>
+					<td style='background-color: #ffb3b5; color: #000000; border-bottom: 1px solid black;'>Crit</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_weaponName" placeholder="Weapon Name"/></td>
+					<td><input type="text" name="attr_weaponNumAttacks" class="sheet-short" placeholder="1"/></td>
+					<td><input type="number" name="attr_weaponAttackMod" class="sheet-short" value="0"/></td>
+					<td><input type="text" name="attr_weaponDamageDie" class="sheet-short" placeholder="0d0"/></td>
+					<td><input type="number" name="attr_weaponDamageMod" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_weaponRangeClose" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_weaponRangeMedium" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_weaponRangeLong" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_weaponSpeed" class="sheet-short" placeholder="0"/></td>
+					<td><input type="text" name="attr_weaponType" class="sheet-short" placeholder="T"/></td>
+					<td><input type="text" name="attr_weaponSize" class="sheet-short" placeholder="N"/></td>
+					<td><button type="roll" name="roll_weaponInitiative" value="&{template:default} {{name=@{weaponName} Initiative}} {{initiative=[[1d10+@{weaponSpeed}]]}}"></button></td>
+					<td><button type="roll" name="roll_weaponAttack" value="&{template:default} {{name=@{weaponName} Attack}} {{attack=[[1d20+@{weaponAttackMod}+?{To Hit Modifier|0}]]}} {{damage=[[@{weaponDamageDie}+@{weaponDamageMod}]]}}"></button></td>
+					<td><button type="roll" name="roll_weaponCrit" value="&{template:default} {{name=@{weaponName} Damage}} {{damage=[[@{weaponDamageDie}]]}}"></button></td>
+					</tr>
+			</table>
+			<fieldset class="repeating_classes2">
+				<table style="text-align:center; border:none;" cellpadding="2">
+					<tr>
+					<td><input type="text" name="attr_weaponName" placeholder="Weapon Name"/></td>
+					<td><input type="text" name="attr_weaponNumAttacks" class="sheet-short" placeholder="1"/></td>
+					<td><input type="number" name="attr_weaponAttackMod" class="sheet-short" value="0"/></td>
+					<td><input type="text" name="attr_weaponDamageDie" class="sheet-short" placeholder="0d0"/></td>
+					<td><input type="number" name="attr_weaponDamageMod" class="sheet-short" value="0"/></td>
+					<td><input type="number" name="attr_weaponRangeClose" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_weaponRangeMedium" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_weaponRangeLong" class="sheet-short" placeholder="00"/></td>
+					<td><input type="number" name="attr_weaponSpeed" class="sheet-short" placeholder="0"/></td>
+					<td><input type="text" name="attr_weaponType" class="sheet-short" placeholder="T"/></td>
+					<td><input type="text" name="attr_weaponSize" class="sheet-short" placeholder="N"/></td>
+					<td><button type="roll" name="roll_weaponInitiative" value="&{template:default} {{name=@{weaponName} Initiative}} {{initiative=[[1d10+@{weaponSpeed}]]}}"></button></td>
+					<td><button type="roll" name="roll_weaponAttack" value="&{template:default} {{name=@{weaponName} Attack}} {{attack=[[1d20+@{weaponAttackMod}+?{To Hit Modifier|0}]]}} {{damage=[[@{weaponDamageDie}+@{weaponDamageMod}]]}}"></button></td>
+					<td><button type="roll" name="roll_weaponCrit" value="&{template:default} {{name=@{weaponName} Damage}} {{damage=[[@{weaponDamageDie}]]}}"></button></td>
+					</tr>
+				</table>
+			</fieldset>
+			<br>
+			<textarea name="attr_weaponNotes"></textarea>
+		</div>
+	</div>
+	<br>
+
+	<!--Wealth, AC, & Proficiencies-->
+	<div class="sheet-2colrow">
+		<div class="sheet-col">
+			<h2>Wealth</h2>
+			<table border="0" style="text-align:center;" cellpadding="2" frame="box">
+				<tr>
+					<td style='background-color: #fdf5ce; color: #000000; border:none;'>Plat</td>
+					<td style='background-color: #fdf5ce; color: #000000; border:none;'>Gold</td>
+					<td style='background-color: #fdf5ce; color: #000000; border:none;'>Elec</td>
+					<td style='background-color: #fdf5ce; color: #000000; border:none;'>Silv</td>
+					<td style='background-color: #fdf5ce; color: #000000; border:none;'>Copp</td>
+				</tr>
+				<tr>
+					<td><input type="number" name="attr_wealthPlatinum" placeholder="0"/></td>
+					<td><input type="number" name="attr_wealthGold" placeholder="0"/></td>
+					<td><input type="number" name="attr_wealthElectrum" placeholder="0"/></td>
+					<td><input type="number" name="attr_wealthSilver" placeholder="0"/></td>
+					<td><input type="number" name="attr_wealthCopper" placeholder="0"/></td>
+				</tr>
+			</table>
+			<br>
+			<textarea name="attr_wealthNotes"></textarea>
+			<br>
+			<h2>Inventory</h2>
+			<table border="0" style="text-align:center; border:none;" cellpadding="2">
+				<tr>
+					<td style='background-color: #fdf5ce; color: #000000; border-bottom: 1px solid black;'>Item</td>
+					<td style='background-color: #fdf5ce; color: #000000; border-bottom: 1px solid black;'>Wt.</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_item" value="Clothes & Backpack"/></td>
+					<td><input type="number" name="attr_itemWeight" value="5"/></td>
+				</tr>
+			</table>
+			<fieldset class="repeating_classes5">
+				<table border="0" style="text-align:center; border:none;" cellpadding="2">
+					<tr>
+						<td><input type="text" name="attr_item" placeholder="Item"/></td>
+						<td><input type="number" name="attr_itemWeight" Placeholder="0"/></td>
+					</tr>
+				</table>
+			</fieldset>
+			<br>
+			<table border="0" style="text-align:center;" cellpadding="2">
+				<tr>
+					<td style='background-color: #fdf5ce; color: #000000; border:none;'>Total Weight:</td>
+					<td><input type="number" name="attr_itemTotalWeight" Value="5"/></td>
+				</tr>
+			</table>
+			<br>
+			<h2>Cleric Spheres</h2>
+			<table border="0" style="text-align:center;" cellpadding="2" frame="box">
+				<tr>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>Major</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>p.</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>Minor</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>p.</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_majorSphere1" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_majorSphereP1" class="sheet-short" placeholder="000"/></td>
+					<td><input type="text" name="attr_minorSphere1" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_minorSphereP1" class="sheet-short" placeholder="000"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_majorSphere2" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_majorSphereP2" class="sheet-short" placeholder="000"/></td>
+					<td><input type="text" name="attr_minorSphere2" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_minorSphereP2" class="sheet-short" placeholder="000"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_majorSphere3" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_majorSphereP3" class="sheet-short" placeholder="000"/></td>
+					<td><input type="text" name="attr_minorSphere3" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_minorSphereP3" class="sheet-short" placeholder="000"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_majorSphere4" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_majorSphereP4" class="sheet-short" placeholder="000"/></td>
+					<td><input type="text" name="attr_minorSphere4" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_minorSphereP4" class="sheet-short" placeholder="000"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_majorSphere5" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_majorSphereP5" class="sheet-short" placeholder="000"/></td>
+					<td><input type="text" name="attr_minorSphere5" class="sheet-medium" placeholder="Sphere"/></td>
+					<td><input type="text" name="attr_minorSphereP5" class="sheet-short" placeholder="000"/></td>
+				</tr>
+			</table>
+			<br>
+			<h2>Daily Spells</h2>
+			<table border="0" style="text-align:center;" cellpadding="2" frame="box">
+				<tr>
+					<td style='background-color: #e7ccff; color: #000000; border:none;'></td>
+					<td style='background-color: #e7ccff; color: #000000; border:none;'>1st</td>
+					<td style='background-color: #e7ccff; color: #000000; border:none;'>2nd</td>
+					<td style='background-color: #e7ccff; color: #000000; border:none;'>3rd</td>
+					<td style='background-color: #e7ccff; color: #000000; border:none;'>4th</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="number" name="attr_spells1st" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_spells2nd" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_spells3rd" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_spells4th" class="sheet-short" placeholder="0"/></td>
+				</tr>
+				<tr>
+					<td style='background-color: #e7ccff; color: #000000; border-top: 1px solid line;'>5th</td>
+					<td style='background-color: #e7ccff; color: #000000; border-top: 1px solid line;'>6th</td>
+					<td style='background-color: #e7ccff; color: #000000; border-top: 1px solid line;'>7th</td>
+					<td style='background-color: #e7ccff; color: #000000; border-top: 1px solid line;'>8th</td>
+					<td style='background-color: #e7ccff; color: #000000; border-top: 1px solid line;'>9th</td>
+				</tr>
+				<tr>
+					<td><input type="number" name="attr_spells5th" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_spells6th" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_spells7th" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_spells8th" class="sheet-short" placeholder="0"/></td>
+					<td><input type="number" name="attr_spells9th" class="sheet-short" placeholder="0"/></td>
+				</tr>
+			</table>
+			<br>
+			<h2>Spell List</h2>
+			<table border="0" style="text-align:center; border:none;" cellpadding="2">
+				<tr>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>LV</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>Spell</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>Mem</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>Fail</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'>Dmg/<br>Heal</td>
+					<td style='background-color: #e7ccff; color: #000000; border-bottom: 1px solid line;'></td>
+				</tr>
+				<tr>
+					<td><input type="number" name="attr_spellLevel" class="sheet-short" value="1"/></td>
+					<td><input type="text" name="attr_spellName" placeholder="Spell Name"/></td>
+					<td><input type="number" name="attr_spellMemorized" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_spellFail" value="&{template:default} {{name=Spell Failure}} {{spell=@{spellName}}} {{result=[[1d100]]}} {{failure=@{charClericSpellFailure}%}}"></button></td>
+					<td><input type="text" name="attr_spellDice" class="sheet-short" placeholder="0d0"/></td>
+					<td><button type="roll" name="roll_spellDice" value="&{template:default} {{name=Spell Damage/Healing}} {{spell=@{spellName}}} {{result=[[@{spellDice}]]}}"></button></td>
+				</tr>
+			</table>
+			<fieldset class="repeating_classes6">
+				<table border="0" style="text-align:center; border:none;" cellpadding="2">
+					<tr>
+						<td><input type="number" name="attr_spellLevel" class="sheet-short" value="1"/></td>
+					<td><input type="text" name="attr_spellName" placeholder="Spell Name"/></td>
+					<td><input type="number" name="attr_spellMemorized" class="sheet-short" value="0"/></td>
+					<td><button type="roll" name="roll_spellFail" value="&{template:default} {{name=Spell Failure}} {{spell=@{spellName}}} {{result=[[1d100]]}} {{failure=@{charClericSpellFailure}%}}"></button></td>
+					<td><input type="text" name="attr_spellDice" class="sheet-short" placeholder="0d0"/></td>
+					<td><button type="roll" name="roll_spellDice" value="&{template:default} {{name=Spell Damage/Healing}} {{spell=@{spellName}}} {{result=[[@{spellDice}]]}}"></button></td>
+					</tr>
+				</table>
+			</fieldset>
+			<br>
+			<textarea name="attr_spellNotes"></textarea>
+		</div>
+		<div class="sheet-col">
+			<h2>AC</h2>
+			<table border="0" style="text-align:center;" cellpadding="2" frame="box">
+				<tr>
+					<td style='background-color: #ffb3b5; color: #000000; border:none;'>Armor/Item</td>
+					<td style='background-color: #ffb3b5; color: #000000; border:none;'>AC<br>Bonus</td>
+				</tr>
+				<tr>
+					<td style='text-align:right;'>Dexterity AC Adj:</td>
+					<td><input type="number" name="attr_dexAC" value="@{charDefensiveAdj}" disabled="true" class="sheet-short"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorHead" placeholder="Helm"/></td>
+					<td><input type="number" name="attr_armorHeadAC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorArms" placeholder="Arms"/></td>
+					<td><input type="number" name="attr_armorArmsAC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorChest" placeholder="Chest/Full Suit"/></td>
+					<td><input type="number" name="attr_armorChestAC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorLegs" placeholder="Legs"/></td>
+					<td><input type="number" name="attr_armorLegsAC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorShield" placeholder="Shield"/></td>
+					<td><input type="number" name="attr_armorShieldAC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorMagic1" placeholder="Magic Item"/></td>
+					<td><input type="number" name="attr_armorMagic1AC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorMagic2" placeholder="Magic Item"/></td>
+					<td><input type="number" name="attr_armorMagic2AC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_armorMagic3" placeholder="Magic Item"/></td>
+					<td><input type="number" name="attr_armorMagic3AC" class="sheet-short" value="0"/></td>
+				</tr>
+				<tr>
+					<td style=' text-align:right;'>Total:</td>
+					<td><input type="number" name="attr_baseAC" disabled="true" class="sheet-short" value="[[10+@{charDefensiveAdj}+@{armorHeadAC}+@{armorArmsAC}+@{armorChestAC}+@{armorLegsAC}+@{armorShieldAC}+@{armorMagic1AC}+@{armorMagic2AC}+@{armorMagic3AC}]]"/></td>
+				</tr>
+				<tr>
+					<td style=' text-align:right;'>Surpised:</td>
+					<td><input type="number" name="attr_surpriseAC" value="[[@{baseAC}-2}]]" disabled="true" class="sheet-short"/></td>
+				</tr>
+				<tr>
+					<td style=' text-align:right;'>Without Dex Bonus:</td>
+					<td><input type="number" value="[[@{baseAC}-@{charDefensiveAdj}]]" name="attr_heavyAC" disabled="true" class="sheet-short"/></td>
+				</tr>
+				<tr>
+					<td style=' text-align:right;'>Surpised:</td>
+					<td><input type="number" name="attr_heavySurpriseAC" value="[[@{heavyAC}-2}]]" disabled="true" class="sheet-short"/></td>
+				</tr>
+			</table>
+			<br>
+			<h2>Weapon Proficiencies</h2>
+			<table border="0" style="text-align:center; border:none;" cellpadding="2">
+				<tr>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Weapon Proficiency</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Spent</td>
+				</tr>
+				<tr>
+					<td><input type="text" name="attr_weaponProf" placeholder="Weapon Group/Fighting Style"/></td>
+					<td><input type="number" name="attr_weaponProficiencySpent" class="sheet-short" placeholder="0"/></td>
+				</tr>
+			</table>
+			<fieldset class="repeating_classes3">
+				<table border="0" style="text-align:center; border:none;" cellpadding="2">
+					<tr>
+						<td><input type="text" name="attr_weaponProf" placeholder="Weapon Group/Fighting Style"/></td>
+						<td><input type="number" name="attr_weaponProficiencySpent" class="sheet-short" placeholder="0"/></td>
+					</tr>
+				</table>
+			</fieldset>
+			<br>
+			<h2>Non-W. Proficiencies</h2>
+			<table style="text-align:center;" cellpadding="4px">
+				<tr>
+					<td style='background-color: #d4ffcc; color: #000000; text-align:left; border-bottom: 1px solid line;'>Craft</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Val</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Non</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Prof</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Aprn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Jrn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Mst</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line;'>Roll</td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Armorer*</td>
+					<td><input type="text" name="attr_armorerVal" disabled="true" value="@{armorer}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_armorer" value="floor(@{charDexterity}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_armorer" value="@{charDexterity}"></td>
+					<td><input type="radio" name="attr_armorer" value="@{charDexterity}+2"></td>
+					<td><input type="radio" name="attr_armorer" value="@{charDexterity}+5"></td>
+					<td><input type="radio" name="attr_armorer" value="@{charDexterity}+7"></td>
+					<td><button type="roll" name="roll_armorer" value="&{template:default} {{name=Armorer Check}} {{result=[[1d20+@{armorer}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Chemistry*</td>
+					<td><input type="text" name="attr_chemistryVal" disabled="true" value="@{chemistry}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_chemistry" value="floor(@{charIntelligence}}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_chemistry" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_chemistry" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_chemistry" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_chemistry" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_chemistry" value="&{template:default} {{name=Chemistry Check}} {{result=[[1d20+@{chemistry}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Construction</td>
+					<td><input type="text" name="attr_constructionVal" disabled="true" value="@{construction}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_construction" value="floor(@{charConstitution}}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_construction" value="@{charConstitution}"></td>
+					<td><input type="radio" name="attr_construction" value="@{charConstitution}+2"></td>
+					<td><input type="radio" name="attr_construction" value="@{charConstitution}+5"></td>
+					<td><input type="radio" name="attr_construction" value="@{charConstitution}+7"></td>
+					<td><button type="roll" name="roll_construction" value="&{template:default} {{name=Construction Check}} {{result=[[1d20+@{construction}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Weaponsmith*</td>
+					<td><input type="text" name="attr_weaponsmithVal" disabled="true" value="@{weaponsmith}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_weaponsmith" value="floor(@{charStrength}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_weaponsmith" value="@{charStrength}"></td>
+					<td><input type="radio" name="attr_weaponsmith" value="@{charStrength}+2"></td>
+					<td><input type="radio" name="attr_weaponsmith" value="@{charStrength}+5"></td>
+					<td><input type="radio" name="attr_weaponsmith" value="@{charStrength}+7"></td>
+					<td><button type="roll" name="roll_weaponsmith" value="&{template:default} {{name=Weaponsmith Check}} {{result=[[1d20+@{weaponsmith}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Wright*</td>
+					<td><input type="text" name="attr_wrightVal" disabled="true" value="@{wright}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_wright" value="floor(@{charDexterity}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_wright" value="@{charDexterity}"></td>
+					<td><input type="radio" name="attr_wright" value="@{charDexterity}+2"></td>
+					<td><input type="radio" name="attr_wright" value="@{charDexterity}+5"></td>
+					<td><input type="radio" name="attr_wright" value="@{charDexterity}+7"></td>
+					<td><button type="roll" name="roll_wright" value="&{template:default} {{name=Wright Check}} {{result=[[1d20+@{wright}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #d4ffcc; color: #000000; text-align:left; border-bottom: 1px solid line; border-top: 1px solid line;'>Knowledge</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Val</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Non</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Prof</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Aprn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Jrn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Mst</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Roll</td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Customs</td>
+					<td><input type="text" name="attr_customsVal" disabled="true" value="@{customs}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_customs" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_customs" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_customs" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_customs" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_customs" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_customs" value="&{template:default} {{name=Customs Check}} {{result=[[1d20+@{customs}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">LanguagesΔ</td>
+					<td></td>
+					<td><input type="radio" name="attr_languages"checked="true"></td>
+					<td><input type="radio" name="attr_languages"></td>
+					<td><input type="radio" name="attr_languages"></td>
+					<td><input type="radio" name="attr_languages"></td>
+					<td><input type="radio" name="attr_languages"></td>
+					<td></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Lore</td>
+					<td><input type="text" name="attr_loreVal" disabled="true" value="@{lore}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_lore" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_lore" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_lore" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_lore" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_lore" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_lore" value="&{template:default} {{name=Lore Check}} {{result=[[1d20+@{lore}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Magic*</td>
+					<td><input type="text" name="attr_magicVal" disabled="true" value="@{magic}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_magic" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_magic" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_magic" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_magic" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_magic" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_magic" value="&{template:default} {{name=Magic Check}} {{result=[[1d20+@{magic}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Nature</td>
+					<td><input type="text" name="attr_natureVal" disabled="true" value="@{nature}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_nature" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_nature" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_nature" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_nature" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_nature" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_nature" value="&{template:default} {{name=Nature Check}} {{result=[[1d20+@{nature}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Religion</td>
+					<td><input type="text" name="attr_religionVal" disabled="true" value="@{religion}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_religion" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_religion" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_religion" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_religion" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_religion" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_religion" value="&{template:default} {{name=Religion Check}} {{result=[[1d20+@{religion}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Streetwise</td>
+					<td><input type="text" name="attr_streetwiseVal" disabled="true" value="@{streetwise}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_streetwise" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_streetwise" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_streetwise" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_streetwise" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_streetwise" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_streetwise" value="&{template:default} {{name=Streetwise Check}} {{result=[[1d20+@{streetwise}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #d4ffcc; color: #000000; text-align:left; border-bottom: 1px solid line; border-top: 1px solid line;'>Learned</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Val</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Non</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Prof</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Aprn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Jrn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Mst</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Roll</td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Administration</td>
+					<td><input type="text" name="attr_administrationVal" disabled="true" value="@{administration}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_administration" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_administration" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_administration" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_administration" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_administration" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_administration" value="&{template:default} {{name=Administration Check}} {{result=[[1d20+@{administration}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Appraisal</td>
+					<td><input type="text" name="attr_appraisalVal" disabled="true" value="@{appraisal}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_appraisal" value="floor(@{charWisdom}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_appraisal" value="@{charWisdom}"></td>
+					<td><input type="radio" name="attr_appraisal" value="@{charWisdom}+2"></td>
+					<td><input type="radio" name="attr_appraisal" value="@{charWisdom}+5"></td>
+					<td><input type="radio" name="attr_appraisal" value="@{charWisdom}+7"></td>
+					<td><button type="roll" name="roll_appraisal" value="&{template:default} {{name=Appraisal Check}} {{result=[[1d20+@{appraisal}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Architecture*</td>
+					<td><input type="text" name="attr_architectureVal" disabled="true" value="@{architecture}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_architecture" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_architecture" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_architecture" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_architecture" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_architecture" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_architecture" value="&{template:default} {{name=Architecture Check}} {{result=[[1d20+@{architecture}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Art</td>
+					<td><input type="text" name="attr_artVal" disabled="true" value="@{art}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_art" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_art" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_art" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_art" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_art" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_art" value="&{template:default} {{name=Art Check}} {{result=[[1d20+@{art}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Mechanics*</td>
+					<td><input type="text" name="attr_mechanicsVal" disabled="true" value="@{mechanics}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_mechanics" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_mechanics" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_mechanics" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_mechanics" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_mechanics" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_mechanics" value="&{template:default} {{name=Mechanics Check}} {{result=[[1d20+@{mechanics}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Physician</td>
+					<td><input type="text" name="attr_physicianVal" disabled="true" value="@{physician}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_physician" value="floor(@{charWisdom}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_physician" value="@{charWisdom}"></td>
+					<td><input type="radio" name="attr_physician" value="@{charWisdom}+2"></td>
+					<td><input type="radio" name="attr_physician" value="@{charWisdom}+5"></td>
+					<td><input type="radio" name="attr_physician" value="@{charWisdom}+7"></td>
+					<td><button type="roll" name="roll_physician" value="&{template:default} {{name=Physician Check}} {{result=[[1d20+@{physician}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Warfare</td>
+					<td><input type="text" name="attr_warfareVal" disabled="true" value="@{warfare}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_warfare" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_warfare" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_warfare" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_warfare" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_warfare" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_warfare" value="&{template:default} {{name=Warfare Check}} {{result=[[1d20+@{warfare}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #d4ffcc; color: #000000; text-align:left; border-bottom: 1px solid line; border-top: 1px solid line;'>Physical</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Val</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Non</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Prof</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Aprn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Jrn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Mst</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Roll</td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Acrobatics</td>
+					<td><input type="text" name="attr_acrobaticsVal" disabled="true" value="@{acrobatics}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_acrobatics" value="floor(@{charDexterity}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_acrobatics" value="@{charDexterity}"></td>
+					<td><input type="radio" name="attr_acrobatics" value="@{charDexterity}+2"></td>
+					<td><input type="radio" name="attr_acrobatics" value="@{charDexterity}+5"></td>
+					<td><input type="radio" name="attr_acrobatics" value="@{charDexterity}+7"></td>
+					<td><button type="roll" name="roll_acrobatics" value="&{template:default} {{name=Acrobatics Check}} {{result=[[1d20+@{acrobatics}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Animal Husbandry</td>
+					<td><input type="text" name="attr_animalHusbandryVal" disabled="true" value="@{animalHusbandry}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_animalHusbandry" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_animalHusbandry" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_animalHusbandry" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_animalHusbandry" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_animalHusbandry" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_animalHusbandry" value="&{template:default} {{name=Animal Husbandry Check}} {{result=[[1d20+@{animalHusbandry}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Athletics</td>
+					<td><input type="text" name="attr_athleticsVal" disabled="true" value="@{athletics}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_athletics" value="floor(@{charStrength}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_athletics" value="@{charStrength}"></td>
+					<td><input type="radio" name="attr_athletics" value="@{charStrength}+2"></td>
+					<td><input type="radio" name="attr_athletics" value="@{charStrength}+5"></td>
+					<td><input type="radio" name="attr_athletics" value="@{charStrength}+7"></td>
+					<td><button type="roll" name="roll_athletics" value="&{template:default} {{name=Athletics Check}} {{result=[[1d20+@{athletics}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Disguise</td>
+					<td><input type="text" name="attr_disguiseVal" disabled="true" value="@{disguise}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_disguise" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_disguise" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_disguise" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_disguise" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_disguise" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_disguise" value="&{template:default} {{name=Disguise Check}} {{result=[[1d20+@{disguise}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Perception</td>
+					<td><input type="text" name="attr_perceptionVal" disabled="true" value="@{perception}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_perception" value="floor(@{charWisdom}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_perception" value="@{charWisdom}"></td>
+					<td><input type="radio" name="attr_perception" value="@{charWisdom}+2"></td>
+					<td><input type="radio" name="attr_perception" value="@{charWisdom}+5"></td>
+					<td><input type="radio" name="attr_perception" value="@{charWisdom}+7"></td>
+					<td><button type="roll" name="roll_perception" value="&{template:default} {{name=Perception Check}} {{result=[[1d20+@{perception}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Riding</td>
+					<td><input type="text" name="attr_ridingVal" disabled="true" value="@{riding}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_riding" value="floor(@{charDexterity}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_riding" value="@{charDexterity}"></td>
+					<td><input type="radio" name="attr_riding" value="@{charDexterity}+2"></td>
+					<td><input type="radio" name="attr_riding" value="@{charDexterity}+5"></td>
+					<td><input type="radio" name="attr_riding" value="@{charDexterity}+7"></td>
+					<td><button type="roll" name="roll_riding" value="&{template:default} {{name=Riding Check}} {{result=[[1d20+@{riding}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Seamanship</td>
+					<td><input type="text" name="attr_seamanshipVal" disabled="true" value="@{seamanship}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_seamanship" value="floor(@{charWisdom}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_seamanship" value="@{charWisdom}"></td>
+					<td><input type="radio" name="attr_seamanship" value="@{charWisdom}+2"></td>
+					<td><input type="radio" name="attr_seamanship" value="@{charWisdom}+5"></td>
+					<td><input type="radio" name="attr_seamanship" value="@{charWisdom}+7"></td>
+					<td><button type="roll" name="roll_seamanship" value="&{template:default} {{name=Seamanship Check}} {{result=[[1d20+@{seamanship}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Skullduggery</td>
+					<td><input type="text" name="attr_skullduggeryVal" disabled="true" value="@{skullduggery}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_skullduggery" value="floor(@{charDexterity}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_skullduggery" value="@{charDexterity}"></td>
+					<td><input type="radio" name="attr_skullduggery" value="@{charDexterity}+2"></td>
+					<td><input type="radio" name="attr_skullduggery" value="@{charDexterity}+5"></td>
+					<td><input type="radio" name="attr_skullduggery" value="@{charDexterity}+7"></td>
+					<td><button type="roll" name="roll_skullduggery" value="&{template:default} {{name=Skullduggery Check}} {{result=[[1d20+@{skullduggery}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Subversion</td>
+					<td><input type="text" name="attr_subversionVal" disabled="true" value="@{subversion}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_subversion" value="floor(@{charDexterity}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_subversion" value="@{charDexterity}"></td>
+					<td><input type="radio" name="attr_subversion" value="@{charDexterity}+2"></td>
+					<td><input type="radio" name="attr_subversion" value="@{charDexterity}+5"></td>
+					<td><input type="radio" name="attr_subversion" value="@{charDexterity}+7"></td>
+					<td><button type="roll" name="roll_subversion" value="&{template:default} {{name=Subversion Check}} {{result=[[1d20+@{subversion}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Survival</td>
+					<td><input type="text" name="attr_survivalVal" disabled="true" value="@{survival}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_survival" value="floor(@{charWisdom}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_survival" value="@{charWisdom}"></td>
+					<td><input type="radio" name="attr_survival" value="@{charWisdom}+2"></td>
+					<td><input type="radio" name="attr_survival" value="@{charWisdom}+5"></td>
+					<td><input type="radio" name="attr_survival" value="@{charWisdom}+7"></td>
+					<td><button type="roll" name="roll_survival" value="&{template:default} {{name=Survival Check}} {{result=[[1d20+@{survival}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style='background-color: #d4ffcc; color: #000000; text-align:left; border-bottom: 1px solid line; border-top: 1px solid line;'>Social</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Val</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Non</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Prof</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Aprn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Jrn</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Mst</td>
+					<td style='background-color: #d4ffcc; color: #000000; border-bottom: 1px solid line; border-top: 1px solid line;'>Roll</td>
+				</tr>
+				<tr>
+					<td style="text-align:left;"><input type="text" name="attr_culture1Name" class="sheet-medium" placeholder="Culture"/></td>
+					<td><input type="text" name="attr_culture1Val" disabled="true" value="@{culture1}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_culture1" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_culture1" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_culture1" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_culture1" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_culture1" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_culture1" value="&{template:default} {{name=@{culture1Name} Culture Check}} {{result=[[1d20+@{culture1}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;"><input type="text" name="attr_culture2Name" class="sheet-medium" placeholder="Culture"/></td>
+					<td><input type="text" name="attr_culture2Val" disabled="true" value="@{culture2}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_culture2" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_culture2" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_culture2" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_culture2" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_culture2" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_culture2" value="&{template:default} {{name=@{culture2Name} Culture Check}} {{result=[[1d20+@{culture2}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Blackmail</td>
+					<td><input type="text" name="attr_blackmailVal" disabled="true" value="@{blackmail}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_blackmail" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_blackmail" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_blackmail" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_blackmail" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_blackmail" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_blackmail" value="&{template:default} {{name=Blackmail Check}} {{result=[[1d20+@{blackmail}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Coercion</td>
+					<td><input type="text" name="attr_coercionVal" disabled="true" value="@{coercion}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_coercion" value="floor(@{charStrength}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_coercion" value="@{charStrength}"></td>
+					<td><input type="radio" name="attr_coercion" value="@{charStrength}+2"></td>
+					<td><input type="radio" name="attr_coercion" value="@{charStrength}+5"></td>
+					<td><input type="radio" name="attr_coercion" value="@{charStrength}+7"></td>
+					<td><button type="roll" name="roll_coercion" value="&{template:default} {{name=Coercion Check}} {{result=[[1d20+@{coercion}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Falsehood</td>
+					<td><input type="text" name="attr_falsehoodVal" disabled="true" value="@{falsehood}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_falsehood" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_falsehood" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_falsehood" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_falsehood" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_falsehood" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_falsehood" value="&{template:default} {{name=Falsehood Check}} {{result=[[1d20+@{falsehood}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Leadership</td>
+					<td><input type="text" name="attr_leadershipVal" disabled="true" value="@{leadership}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_leadership" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_leadership" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_leadership" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_leadership" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_leadership" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_leadership" value="&{template:default} {{name=Leadership Check}} {{result=[[1d20+@{leadership}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Negotiation</td>
+					<td><input type="text" name="attr_negotiationVal" disabled="true" value="@{negotiation}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_negotiation" value="floor(@{charIntelligence}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_negotiation" value="@{charIntelligence}"></td>
+					<td><input type="radio" name="attr_negotiation" value="@{charIntelligence}+2"></td>
+					<td><input type="radio" name="attr_negotiation" value="@{charIntelligence}+5"></td>
+					<td><input type="radio" name="attr_negotiation" value="@{charIntelligence}+7"></td>
+					<td><button type="roll" name="roll_negotiation" value="&{template:default} {{name=Negotiation Check}} {{result=[[1d20+@{negotiation}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr style="background-color: #f1f6ef;">
+					<td style="text-align:left;">Performance</td>
+					<td><input type="text" name="attr_performanceVal" disabled="true" value="@{performance}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_performance" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_performance" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_performance" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_performance" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_performance" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_performance" value="&{template:default} {{name=Performance Check}} {{result=[[1d20+@{performance}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+				<tr>
+					<td style="text-align:left;">Persuasion</td>
+					<td><input type="text" name="attr_persuasionVal" disabled="true" value="@{persuasion}" class="sheet-short"/></td>
+					<td><input type="radio" name="attr_persuasion" value="floor(@{charCharisma}/2)" checked="true"></td>
+					<td><input type="radio" name="attr_persuasion" value="@{charCharisma}"></td>
+					<td><input type="radio" name="attr_persuasion" value="@{charCharisma}+2"></td>
+					<td><input type="radio" name="attr_persuasion" value="@{charCharisma}+5"></td>
+					<td><input type="radio" name="attr_persuasion" value="@{charCharisma}+7"></td>
+					<td><button type="roll" name="roll_persuasion" value="&{template:default} {{name=Persuasion Check}} {{result=[[1d20+@{persuasion}+?{Modifier?|0}]]}}"></button></td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<br>
+
+
